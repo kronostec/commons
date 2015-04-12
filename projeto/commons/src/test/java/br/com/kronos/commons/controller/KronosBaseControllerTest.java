@@ -33,7 +33,7 @@ public class KronosBaseControllerTest {
 	
 	@Test
 	public void deveSetarDadoNaSessao() {
-		controller.setAttribute(STRING_TESTE, STRING_ATRIBUTO);
+		controller.setSessao(STRING_TESTE, STRING_ATRIBUTO);
 		verify(sessao).setAttribute(
 				eq(STRING_TESTE), eq(STRING_ATRIBUTO)
 			);
@@ -46,10 +46,15 @@ public class KronosBaseControllerTest {
  		assertEquals(String.class, stringTeste.getClass());
 	}
 	
-	@Test(expected=IllegalArgumentException.class)
+	@Test
 	public void deveEstourarExceptionDeClasseErrada() {
 		when(sessao.getAttribute(STRING_TESTE)).thenReturn(STRING_ATRIBUTO);
-		controller.getSessao(STRING_TESTE, Object.class);
+		try{
+			controller.getSessao(STRING_TESTE, Object.class);
+		}catch(IllegalArgumentException ex){
+			assertEquals(IllegalArgumentException.class, ex.getClass());
+			assertEquals("Chave " + STRING_TESTE + " não contém o objeto " + Object.class.getName(), ex.getMessage());
+		}
 	}
 
 	@Test

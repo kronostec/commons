@@ -24,7 +24,7 @@ public class KronosBaseController {
 		}
 	}
 
-	public void setAttribute(String chave, Object atributo) {
+	public void setSessao(String chave, Object atributo) {
 		sessao.setAttribute(chave, atributo);
 	}
 	

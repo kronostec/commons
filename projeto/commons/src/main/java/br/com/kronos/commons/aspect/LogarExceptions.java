@@ -22,7 +22,7 @@ public class LogarExceptions {
 	
 	@AfterThrowing(pointcut = "execution(* br.com.kronos..*.*.*(..))", throwing = "ex")
 	public void interceptException(JoinPoint ponto, Throwable ex) {
-		logger.error("Erro ao executar metodo: " + ponto.getThis().toString() + "." + ponto.getSignature().getName(), ex);
+		logger.error("Erro ao executar metodo: " + ponto.getSignature().getDeclaringTypeName() + "." + ponto.getSignature().getName(), ex);
 	}
 
 }

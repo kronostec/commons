@@ -14,6 +14,11 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 
+/**
+ * @author Jefferson
+ *
+ */
+
 public class KronosBaseControllerTest {
 
 	private static final String STRING_ATRIBUTO = "Atributo teste";

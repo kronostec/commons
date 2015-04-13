@@ -1,4 +1,4 @@
-package br.com.kronos.commons.aspect;
+package br.com.kronos.commons.aspect.logs;
 
 import static org.mockito.Mockito.when;
 
@@ -9,6 +9,13 @@ import org.junit.Test;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
+
+import br.com.kronos.commons.aspect.logs.LogarExceptions;
+
+/**
+ * @author Jefferson
+ *
+ */
 
 public class LogarExceptionsTest {
 

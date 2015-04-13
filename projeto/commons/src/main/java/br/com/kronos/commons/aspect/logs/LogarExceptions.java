@@ -1,7 +1,5 @@
-/**
- * 
- */
-package br.com.kronos.commons.aspect;
+
+package br.com.kronos.commons.aspect.logs;
 
 import org.apache.log4j.Logger;
 import org.aspectj.lang.JoinPoint;

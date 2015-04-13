@@ -1,4 +1,4 @@
-package br.com.kronos.commons.aspect;
+package br.com.kronos.commons.aspect.logs;
 
 import static org.junit.Assert.assertNotNull;
 import static org.mockito.Mockito.when;
@@ -16,7 +16,13 @@ import org.powermock.reflect.Whitebox;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+import br.com.kronos.commons.aspect.logs.LogarPaginasAcessadas;
 import br.com.kronos.commons.controller.KronosBaseController;
+
+/**
+ * @author Jefferson
+ *
+ */
 
 public class LogarPaginasAcessadasTest {
 

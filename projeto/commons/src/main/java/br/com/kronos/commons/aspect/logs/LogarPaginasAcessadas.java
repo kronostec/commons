@@ -1,4 +1,4 @@
-package br.com.kronos.commons.aspect;
+package br.com.kronos.commons.aspect.logs;
 
 import static java.lang.System.lineSeparator;
 
@@ -11,6 +11,11 @@ import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import br.com.kronos.commons.controller.KronosBaseController;
+
+/**
+ * @author Jefferson
+ *
+ */
 
 @Aspect
 @Component
